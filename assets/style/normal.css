@@ -1,14 +1,96 @@
 /* HIER KOMT JOUW CSS */
 @font-face {
-  font-family: "Comic Relief";
-  src: url(../type/ComicRelief-Regular.woff2);
+  font-family: "Faculty Glyphic", sans-serif;
+  src: url(./assets/type/FacultyGlyphic-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Abril Fatface", serif;
+  src: url(./assets/type/AbrilFatface-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Starlight Rune", serif;
+  src: url(./assets/type/StarlightRune-Personal\ Use.ttf);
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: "Comic Relief", system-ui;
-  background-color: Canvas;
-  color: CanvasText;
+  font-family: "Faculty Glyphic", sans-serif;
+  background-color: #fce653;
+  color: #1a1a1a;
   color-scheme: light dark;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+}
+
+h2 {
+  font-family: "Faculty Glyphic", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+p {
+  font-family: "Faculty Glyphic", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+img {
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+section {
+  display: grid;
+  grid-template-areas:
+    "plaatje1"
+    "plaatje2"
+    "plaatje3"
+    "plaatje4";
+
+  @media (width > 28em) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 24em 12em 12em;
+    grid-template-areas:
+      "plaatje1 plaatje1"
+      "plaatje2 plaatje3"
+      "plaatje2 plaatje4";
+  }
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding 0;
+  overflow: hidden;
+  background-color: #120063;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a{
+  display: block;
+  color:#FDFFD9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover{
+  background-color: #16007A;
+}
+
+footer {
+  position: bottom;
 }
